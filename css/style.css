@@ -363,26 +363,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-visual {
   position: absolute;
-  right: 0;
+  right: 40px;
   top: 50%;
   transform: translateY(-50%);
-  width: 45%;
-  max-width: 540px;
+  width: 42%;
+  max-width: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 76px;
   animation: fadeInRight .8s ease .3s both;
 }
 
 .hero-card-stack {
   position: relative;
-  width: 380px;
-  height: 460px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .hero-card {
-  position: absolute;
-  background: rgba(255,255,255,.05);
+  background: rgba(255,255,255,.06);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--radius-lg);
@@ -390,22 +392,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero-card-main {
-  top: 0; left: 0; right: 0;
-  background: rgba(255,255,255,.07);
+  background: rgba(255,255,255,.08);
 }
 
 .hero-card-float1 {
-  bottom: 20px;
-  right: -20px;
-  width: 200px;
   background: rgba(201,168,76,.12);
   border-color: rgba(201,168,76,.25);
 }
 
 .hero-card-float2 {
-  bottom: 100px;
-  left: -30px;
-  width: 180px;
   background: rgba(37,99,235,.12);
   border-color: rgba(37,99,235,.25);
 }
@@ -520,8 +515,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .service-card {
@@ -729,9 +724,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .process-steps::before {
   content: '';
   position: absolute;
-  top: 36px;
-  left: calc(12.5% + 36px);
-  right: calc(12.5% + 36px);
+  top: 35px;
+  left: calc(12.5%);
+  right: calc(12.5%);
   height: 2px;
   background: linear-gradient(90deg, var(--gold) 0%, rgba(201,168,76,.2) 100%);
 }
@@ -1620,14 +1615,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* =============================================
    RESPONSIVE
    ============================================= */
+@media (max-width: 1200px) {
+  .hero-content { max-width: 580px; }
+  .hero-visual { width: 44%; right: 20px; }
+}
+
 @media (max-width: 1024px) {
   .hero-visual { display: none; }
+  .hero-content { max-width: 100%; }
   .why-inner { grid-template-columns: 1fr; gap: 48px; }
   .why-right { grid-template-columns: repeat(4, 1fr); }
   .why-stat-card:nth-child(2),
   .why-stat-card:nth-child(4) { margin-top: 0; }
   .about-inner { grid-template-columns: 1fr; }
-  .footer-main { grid-template-columns: 1fr 1fr; }
+  .about-visual { padding-right: 0; padding-bottom: 40px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1640,19 +1645,25 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .resources-grid { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; }
   .cta-inner { flex-direction: column; text-align: center; }
+  .cta-actions { justify-content: center; }
   .hero-stats { flex-wrap: wrap; gap: 24px; }
   .why-right { grid-template-columns: 1fr 1fr; }
   .footer-main { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-legal { justify-content: center; }
   .resources-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .why-features { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .hero { padding-top: 100px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .why-right { grid-template-columns: 1fr; }
+  .hero { padding-top: 100px; padding-bottom: 48px; }
+  .hero-stats { gap: 20px; }
+  .stat-num { font-size: 1.6rem; }
+  .why-right { grid-template-columns: 1fr 1fr; }
   .contact-form { padding: 28px 20px; }
+  .section-title { font-size: 1.5rem; }
+  .services, .why, .process, .about, .testimonials, .resources, .contact { padding: 72px 0; }
 }
