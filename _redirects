@@ -1,9 +1,2 @@
-# Cloudflare Pages Redirects
-# Format: [source] [destination] [status code]
-
-# www to non-www
-https://www.synsassociates.in/* https://synsassociates.in/:splat 301
-
-# Common typo/trailing slash normalisation
 /index.html / 301
 /home / 302
