@@ -65,16 +65,44 @@
       .article-content h2 { font-size: 1.1rem; margin: 32px 0 12px; padding-top: 24px; }
       .article-content h3 { font-size: 0.95rem; }
       .article-content p, .article-content ul, .article-content ol { font-size: 0.93rem; }
-      /* Make tables horizontally scrollable */
-      .data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
-      .data-table { min-width: 480px; }
-      /* Regulator divider — let label wrap gracefully */
+      /* ── Responsive tables: convert rows to stacked cards ── */
+      .data-table-wrap { width: 100%; }
+      .data-table { width: 100%; font-size: 0.84rem; }
+      .data-table thead { display: none; }
+      .data-table tbody tr {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .data-table tbody td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+      }
+      .data-table tbody td:last-child { border-bottom: none; }
+      .data-table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+      }
+      .data-table tr:nth-child(even) td { background: #f7f8fc; }
+      /* Regulator divider */
       .regulator-divider { flex-wrap: wrap; gap: 10px; margin: 36px 0 0; }
       .regulator-divider-label { white-space: normal; line-height: 1.4; }
       .regulator-divider-line { display: none; }
       /* Highlight boxes */
       .highlight-box { padding: 14px 16px; }
-      /* Sidebar cards on mobile */
+      /* Sidebar */
       .sidebar-card { padding: 18px; }
       /* CTA strip */
       .article-cta-strip { padding: 40px 0; }
@@ -209,16 +237,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>Domestic REIT exposures (treated as Commercial Real Estate)</td>
-              <td><strong>100%</strong></td>
+              <td data-label="Exposure Type">Domestic REIT exposures (treated as Commercial Real Estate)</td>
+              <td data-label="Risk Weight"><strong>100%</strong></td>
             </tr>
             <tr>
-              <td>REIT exposures qualifying as capital market exposure (Para 95A, Concentration Risk Directions)</td>
-              <td><strong>125%</strong></td>
+              <td data-label="Exposure Type">REIT exposures qualifying as capital market exposure (Para 95A, Concentration Risk Directions)</td>
+              <td data-label="Risk Weight"><strong>125%</strong></td>
             </tr>
             <tr>
-              <td>Overseas branches of Indian banks lending to REITs</td>
-              <td><strong>150%</strong></td>
+              <td data-label="Exposure Type">Overseas branches of Indian banks lending to REITs</td>
+              <td data-label="Risk Weight"><strong>150%</strong></td>
             </tr>
           </tbody>
         </table>
@@ -290,28 +318,28 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>14-Day Mandatory Admission</strong></td>
-              <td>NCLT must admit or reject CIRP applications within 14 days; delays require recorded reasons</td>
+              <td data-label="Reform"><strong>14-Day Mandatory Admission</strong></td>
+              <td data-label="Key Change">NCLT must admit or reject CIRP applications within 14 days; delays require recorded reasons</td>
             </tr>
             <tr>
-              <td><strong>Expanded Pre-Pack (PPIRP)</strong></td>
-              <td>Pre-packaged insolvency extended beyond MSMEs to eligible mid-market companies</td>
+              <td data-label="Reform"><strong>Expanded Pre-Pack (PPIRP)</strong></td>
+              <td data-label="Key Change">Pre-packaged insolvency extended beyond MSMEs to eligible mid-market companies</td>
             </tr>
             <tr>
-              <td><strong>CIIRP (New Process)</strong></td>
-              <td>New Creditor-Initiated Insolvency Resolution Process introduced</td>
+              <td data-label="Reform"><strong>CIIRP (New Process)</strong></td>
+              <td data-label="Key Change">New Creditor-Initiated Insolvency Resolution Process introduced</td>
             </tr>
             <tr>
-              <td><strong>Guarantor Asset Transfer (S. 28-A)</strong></td>
-              <td>Guarantor's assets may be transferred as part of CIRP with CoC approval (66% vote threshold where guarantor is also under insolvency)</td>
+              <td data-label="Reform"><strong>Guarantor Asset Transfer (S. 28-A)</strong></td>
+              <td data-label="Key Change">Guarantor's assets may be transferred as part of CIRP with CoC approval (66% vote threshold where guarantor is also under insolvency)</td>
             </tr>
             <tr>
-              <td><strong>Civil Penalty Regime (S. 235A)</strong></td>
-              <td>Adjudicating authority empowered to impose penalties up to 3× the loss caused or unlawful gain</td>
+              <td data-label="Reform"><strong>Civil Penalty Regime (S. 235A)</strong></td>
+              <td data-label="Key Change">Adjudicating authority empowered to impose penalties up to 3× the loss caused or unlawful gain</td>
             </tr>
             <tr>
-              <td><strong>Registered Valuer Definition</strong></td>
-              <td>Statutory definition aligned with the Companies Act, 2013 framework</td>
+              <td data-label="Reform"><strong>Registered Valuer Definition</strong></td>
+              <td data-label="Key Change">Statutory definition aligned with the Companies Act, 2013 framework</td>
             </tr>
           </tbody>
         </table>
@@ -337,29 +365,29 @@
           </thead>
           <tbody>
             <tr>
-              <td>SBU Transfer [Reg. 13A(2)]</td>
-              <td>July 3, 2026</td>
-              <td><strong>December 31, 2026</strong></td>
+              <td data-label="Requirement">SBU Transfer [Reg. 13A(2)]</td>
+              <td data-label="Original Deadline">July 3, 2026</td>
+              <td data-label="Revised Deadline"><strong>December 31, 2026</strong></td>
             </tr>
             <tr>
-              <td>Clause 11.2.10 Compliance</td>
-              <td>July 3, 2026</td>
-              <td><strong>December 31, 2026</strong></td>
+              <td data-label="Requirement">Clause 11.2.10 Compliance</td>
+              <td data-label="Original Deadline">July 3, 2026</td>
+              <td data-label="Revised Deadline"><strong>December 31, 2026</strong></td>
             </tr>
             <tr>
-              <td>Phase I Net Worth [Reg. 7]</td>
-              <td>January 2, 2027</td>
-              <td><strong>March 31, 2027</strong></td>
+              <td data-label="Requirement">Phase I Net Worth [Reg. 7]</td>
+              <td data-label="Original Deadline">January 2, 2027</td>
+              <td data-label="Revised Deadline"><strong>March 31, 2027</strong></td>
             </tr>
             <tr>
-              <td>Phase II Net Worth</td>
-              <td>January 2, 2028</td>
-              <td><strong>March 31, 2028</strong></td>
+              <td data-label="Requirement">Phase II Net Worth</td>
+              <td data-label="Original Deadline">January 2, 2028</td>
+              <td data-label="Revised Deadline"><strong>March 31, 2028</strong></td>
             </tr>
             <tr>
-              <td>Category I / II Intimation to SEBI</td>
-              <td>January 2, 2027</td>
-              <td><strong>March 31, 2027</strong></td>
+              <td data-label="Requirement">Category I / II Intimation to SEBI</td>
+              <td data-label="Original Deadline">January 2, 2027</td>
+              <td data-label="Revised Deadline"><strong>March 31, 2027</strong></td>
             </tr>
           </tbody>
         </table>
