@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css?v=8" />
+  <link rel="stylesheet" href="../css/style.css?v=9" />
   <style>
     .article-header-wrap { background: var(--primary); padding: 56px 0 48px; margin-top: var(--header-h, 76px); }
     .article-breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
@@ -53,7 +53,33 @@
     .article-cta-strip { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); padding: 56px 0; text-align: center; }
     .article-cta-strip h3 { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
     .article-cta-strip p { color: rgba(255,255,255,0.7); margin-bottom: 28px; font-size: 0.95rem; }
-    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+    /* ── Mobile fixes ── */
+    @media (max-width: 600px) {
+      .article-header-wrap { padding: 36px 0 32px; }
+      .article-hero-title { margin-bottom: 14px; }
+      .article-body { padding: 36px 0 52px; }
+      .article-content h2 { font-size: 1.1rem; margin: 32px 0 12px; padding-top: 24px; }
+      .article-content h3 { font-size: 0.95rem; }
+      .article-content p, .article-content ul, .article-content ol { font-size: 0.93rem; }
+      /* Make tables horizontally scrollable */
+      .data-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+      .data-table { min-width: 480px; }
+      /* Regulator divider — let label wrap gracefully */
+      .regulator-divider { flex-wrap: wrap; gap: 10px; margin: 36px 0 0; }
+      .regulator-divider-label { white-space: normal; line-height: 1.4; }
+      .regulator-divider-line { display: none; }
+      /* Highlight boxes */
+      .highlight-box { padding: 14px 16px; }
+      /* Sidebar cards on mobile */
+      .sidebar-card { padding: 18px; }
+      /* CTA strip */
+      .article-cta-strip { padding: 40px 0; }
+      .article-cta-strip h3 { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
@@ -173,6 +199,7 @@
         <h3>Part A — Risk Weight Treatment (8th Amendment Directions, 2026)</h3>
         <p>New paragraphs 61A and 61B have been inserted into the Capital Adequacy Directions, specifying the following risk-weight treatment for REIT exposures:</p>
 
+        <div class="data-table-wrap">
         <table class="data-table">
           <thead>
             <tr>
@@ -195,6 +222,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
         <h3>Part B — Concentration Risk Cap (3rd Amendment Directions, 2026)</h3>
         <p>Old paragraph 94 (general real estate sector exposure limit) has been deleted and replaced with new paragraphs 94A and sub-provisions:</p>
@@ -252,6 +280,7 @@
         <p>The Insolvency and Bankruptcy Board of India (IBBI) notified the <strong>IBBI (IRPCP) Fourth Amendment Regulations, 2026</strong> on June 9, 2026, implementing further provisions of the Insolvency and Bankruptcy Code (Amendment) Act, 2026 (Presidential assent: April 7, 2026; partially operative from May 25, 2026).</p>
         <p>Read together with the 3rd Amendment (June 4) and 2nd Amendment (May 20), the reforms now fully operationalised include:</p>
 
+        <div class="data-table-wrap">
         <table class="data-table">
           <thead>
             <tr>
@@ -286,6 +315,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
         <!-- SEBI SECTION -->
         <div class="regulator-divider">
@@ -296,6 +326,7 @@
         <h2>7. Merchant Banker SBU, Net Worth &amp; Liquid Net Worth — Compliance Timelines Extended</h2>
         <p>SEBI, on June 11, 2026, extended multiple compliance deadlines for merchant bankers under the <strong>SEBI (Merchant Bankers) Regulations, 2025</strong> (notified December 5, 2025). The extension follows representations from market participants regarding system-building complexities.</p>
 
+        <div class="data-table-wrap">
         <table class="data-table">
           <thead>
             <tr>
@@ -332,6 +363,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
         <div class="highlight-box info">
           <p>ℹ️ All other provisions of the January 2, 2026 implementation circular remain unchanged and must be complied with as originally scheduled. Deadlines have been aligned with financial year-end dates as requested by industry.</p>
@@ -501,6 +533,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=8"></script>
+<script src="../js/main.js?v=9"></script>
 </body>
 </html>
