@@ -153,11 +153,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo-mark {
   width: 48px;
   height: 48px;
-  background: var(--gold) url('../images/logo.png') no-repeat top center;
-  background-size: auto 168%;
+  background: var(--gold) url('../images/logo.png') no-repeat center center;
+  background-size: 86% auto;
   border-radius: 10px;
   flex-shrink: 0;
-  overflow: hidden;
 }
 
 .logo-text {
