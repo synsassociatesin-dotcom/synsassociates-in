@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=8" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
 </head>
 <body>
 
@@ -138,30 +138,49 @@
 
     <!-- Hero Visual — hidden on tablet/mobile via CSS -->
     <div class="hero-visual">
-      <div class="hero-card-stack">
-        <!-- Main card: services list -->
-        <div class="hero-card hero-card-main">
-          <div class="card-icon">⚖️</div>
-          <div class="card-title">End-to-End Compliance</div>
-          <div class="card-desc">From registration to ongoing regulatory compliance — all under one roof.</div>
-          <div class="card-list">
-            <div class="card-list-item">Corporate Law &amp; ROC Filings</div>
-            <div class="card-list-item">GST &amp; Income Tax Returns</div>
-            <div class="card-list-item">NBFC &amp; RBI Regulatory</div>
-            <div class="card-list-item">Labour Law Compliance</div>
-            <div class="card-list-item">Trademark &amp; IP Protection</div>
+      <div class="comp-dash">
+        <div class="comp-dash-header">
+          <div class="comp-dash-title">
+            <span class="comp-live-dot"></span>
+            Compliance Coverage Dashboard
+          </div>
+          <span class="comp-dash-badge">Syns Associates</span>
+        </div>
+        <div class="comp-dash-rows">
+          <div class="comp-row">
+            <div class="comp-row-label"><span class="comp-dot" style="background:#22c55e"></span>Corporate &amp; ROC Filings</div>
+            <div class="comp-bar-wrap"><div class="comp-bar-fill" style="--fill:96%; background:#22c55e;"></div></div>
+            <span class="comp-pct">96%</span>
+          </div>
+          <div class="comp-row">
+            <div class="comp-row-label"><span class="comp-dot" style="background:#22c55e"></span>GST &amp; Tax Compliance</div>
+            <div class="comp-bar-wrap"><div class="comp-bar-fill" style="--fill:100%; background:#22c55e;"></div></div>
+            <span class="comp-pct">100%</span>
+          </div>
+          <div class="comp-row">
+            <div class="comp-row-label"><span class="comp-dot" style="background:#22c55e"></span>NBFC &amp; RBI Regulatory</div>
+            <div class="comp-bar-wrap"><div class="comp-bar-fill" style="--fill:94%; background:#22c55e;"></div></div>
+            <span class="comp-pct">94%</span>
+          </div>
+          <div class="comp-row">
+            <div class="comp-row-label"><span class="comp-dot" style="background:#22c55e"></span>Labour Law &amp; HR</div>
+            <div class="comp-bar-wrap"><div class="comp-bar-fill" style="--fill:98%; background:#22c55e;"></div></div>
+            <span class="comp-pct">98%</span>
+          </div>
+          <div class="comp-row">
+            <div class="comp-row-label"><span class="comp-dot" style="background:#c9a84c"></span>SEBI &amp; Capital Markets</div>
+            <div class="comp-bar-wrap"><div class="comp-bar-fill" style="--fill:88%; background:#c9a84c;"></div></div>
+            <span class="comp-pct">88%</span>
           </div>
         </div>
-        <!-- Two mini stat cards side by side -->
-        <div class="hero-cards-mini">
-          <div class="hero-card hero-card-float1">
-            <div class="card-title" style="color:#c9a84c;">Quick Turnaround</div>
-            <div class="card-desc" style="color:rgba(255,255,255,.6);">Most filings processed within 2–5 business days</div>
+        <div class="comp-dash-divider"></div>
+        <div class="comp-dash-footer">
+          <div class="comp-dash-stats">
+            <div class="comp-stat"><span class="comp-stat-num">1,500+</span><span class="comp-stat-label">Clients</span></div>
+            <div class="comp-stat"><span class="comp-stat-num">15+</span><span class="comp-stat-label">Years</span></div>
+            <div class="comp-stat"><span class="comp-stat-num">0</span><span class="comp-stat-label">Penalties</span></div>
           </div>
-          <div class="hero-card hero-card-float2">
-            <div class="card-title" style="color:#fff;">Zero Penalty Track Record</div>
-            <div class="card-desc" style="color:rgba(255,255,255,.5);">100% on-time filings — no client has ever faced a regulatory penalty</div>
-          </div>
+          <a href="#contact" class="btn btn-primary" style="font-size:.8rem; padding:10px 20px;">Free Review →</a>
         </div>
       </div>
     </div>
@@ -957,6 +976,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=8"></script>
+<script src="js/main.js?v=9"></script>
 </body>
 </html>
