@@ -387,6 +387,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .06em;
 }
 
+.stat-divider {
+  width: 1px;
+  background: rgba(255,255,255,.15);
+  align-self: stretch;
+  margin: 4px 0;
+}
+
 /* =============================================
    HERO VISUAL — Compliance Dashboard
    ============================================= */
