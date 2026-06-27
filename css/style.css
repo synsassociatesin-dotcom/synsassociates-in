@@ -862,6 +862,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.08);
 }
 
+.process-step:hover .step-num svg {
+  stroke: #fff;
+}
+
 .step-title {
   font-size: .95rem;
   font-weight: 700;
