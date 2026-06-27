@@ -67,8 +67,8 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => navObserver.observe(s));
 
-/* ---------- Duplicate Ticker for Infinite Scroll ---------- */
-document.querySelectorAll('.ticker-track, .industries-track').forEach(track => {
+/* ---------- Duplicate Ticker for Infinite Scroll (industries only — ticker-track duplicated in HTML) ---------- */
+document.querySelectorAll('.industries-track').forEach(track => {
   const children = [...track.children];
   children.forEach(child => {
     track.appendChild(child.cloneNode(true));
