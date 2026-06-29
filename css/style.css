@@ -948,6 +948,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: rgba(255,255,255,.7);
   line-height: 1.7;
   margin-bottom: 28px;
+  text-align: justify;
 }
 
 .about-pillars {
@@ -1001,7 +1002,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-top: 4px;
 }
 
-.about-content .section-subtitle { max-width: 100%; margin-bottom: 28px; }
+.about-content .section-subtitle { max-width: 100%; margin-bottom: 28px; text-align: justify; }
 
 .about-list {
   display: flex;
@@ -1036,6 +1037,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: .9rem;
   color: var(--text-mid);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about-list-item strong { color: var(--primary); }
