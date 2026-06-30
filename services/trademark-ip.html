@@ -31,11 +31,11 @@
     .svc-content strong { color: var(--text-dark); font-weight: 600; }
     .highlight-box { background: #f7f8fc; border-left: 4px solid var(--gold); padding: 18px 22px; border-radius: 0 8px 8px 0; margin: 24px 0; }
     .highlight-box p { margin: 0; color: var(--text-dark) !important; font-size: 0.92rem !important; }
-    .process-steps { counter-reset: step; list-style: none; margin: 0 0 18px; padding: 0; }
-    .process-steps li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 18px; }
-    .process-steps li::before { content: counter(step); flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
-    .process-steps li div strong { display: block; font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; }
-    .process-steps li div span { font-size: 0.87rem; color: var(--text-mid); }
+    .svc-steps { counter-reset: step; list-style: none; margin: 0 0 18px; padding: 0; }
+    .svc-steps li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 18px; }
+    .svc-steps li::before { content: counter(step); flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .svc-steps li div strong { display: block; font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; }
+    .svc-steps li div span { font-size: 0.87rem; color: var(--text-mid); }
     .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
     .data-table th { background: var(--primary); color: #fff; padding: 11px 14px; text-align: left; font-weight: 600; }
     .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-mid); }
@@ -159,7 +159,7 @@
         </table>
 
         <h2>Trademark Registration Process</h2>
-        <ol class="process-steps">
+        <ol class="svc-steps">
           <li><div><strong>Mark Assessment &amp; Class Identification</strong><span>We review the proposed mark for registrability — distinctiveness, existing conflicts — and identify the most appropriate NICE classes for your business.</span></div></li>
           <li><div><strong>Comprehensive TM Search</strong><span>Full search on IP India portal including identical, similar, and phonetically alike marks in the target classes. Written search report shared with recommendations.</span></div></li>
           <li><div><strong>Application Preparation &amp; Filing</strong><span>Form TM-A filed online on the IP India portal with a specimen of use or proposed use, applicant details, and class specifications. Government fee paid at filing.</span></div></li>

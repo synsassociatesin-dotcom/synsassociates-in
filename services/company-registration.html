@@ -37,11 +37,11 @@
     .svc-card-icon { font-size: 1.5rem; margin-bottom: 10px; }
     .svc-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
     .svc-card p { font-size: 0.83rem; color: var(--text-mid); margin: 0; line-height: 1.6; text-align: left; }
-    .process-steps { counter-reset: step; list-style: none; margin: 0 0 18px; padding: 0; }
-    .process-steps li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 18px; }
-    .process-steps li::before { content: counter(step); flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
-    .process-steps li div strong { display: block; font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; }
-    .process-steps li div span { font-size: 0.87rem; color: var(--text-mid); }
+    .svc-steps { counter-reset: step; list-style: none; margin: 0 0 18px; padding: 0; }
+    .svc-steps li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 18px; }
+    .svc-steps li::before { content: counter(step); flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .svc-steps li div strong { display: block; font-size: 0.95rem; color: var(--primary); margin-bottom: 2px; }
+    .svc-steps li div span { font-size: 0.87rem; color: var(--text-mid); }
     .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
     .data-table th { background: var(--primary); color: #fff; padding: 11px 14px; text-align: left; font-weight: 600; }
     .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-mid); }
@@ -195,7 +195,7 @@
         <p><em>Note: Government fees are illustrative and vary by authorised capital and state stamp duty. Professional fees are quoted separately on engagement.</em></p>
 
         <h2>Our Incorporation Process</h2>
-        <ol class="process-steps">
+        <ol class="svc-steps">
           <li><div><strong>Business Structure Advisory</strong><span>Free 30-minute consultation to identify the optimal entity type based on your objectives, sector, and investor expectations.</span></div></li>
           <li><div><strong>Document Collection &amp; Name Approval</strong><span>We collect KYC documents, draft the name application, and check for conflicting trademarks or company names on MCA before filing.</span></div></li>
           <li><div><strong>DSC &amp; DIN Procurement</strong><span>Class 3 DSC is applied for via authorised Certifying Authorities (CAs). DIN is integrated into the main SPICe+ form for companies.</span></div></li>
