@@ -445,15 +445,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .comp-dash-badge {
-  font-size: .62rem;
-  font-weight: 700;
+  font-size: .68rem;
+  font-weight: 600;
   color: var(--gold);
   background: rgba(201,168,76,.15);
   border: 1px solid rgba(201,168,76,.3);
   padding: 3px 10px;
   border-radius: 20px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
+  letter-spacing: .3px;
+  white-space: nowrap;
 }
 
 .comp-dash-rows {
@@ -464,9 +464,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .comp-row {
   display: grid;
-  grid-template-columns: 1fr 90px 28px;
+  grid-template-columns: 1fr 120px 36px;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .comp-row-label {
@@ -486,7 +486,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .comp-bar-wrap {
-  height: 5px;
+  height: 6px;
   background: rgba(255,255,255,.1);
   border-radius: 10px;
   overflow: hidden;
@@ -504,9 +504,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .comp-pct {
-  font-size: .7rem;
+  font-size: .72rem;
   font-weight: 700;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.7);
   text-align: right;
 }
 
