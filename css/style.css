@@ -405,13 +405,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   animation: fadeInRight .8s ease .3s both;
 }
 
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.comp-dash-glow {
+  position: relative;
+  border-radius: 22px;
+  padding: 2px;
+  background: conic-gradient(from var(--border-angle), rgba(201,168,76,.9), rgba(56,189,248,.55), rgba(167,139,250,.6), rgba(201,168,76,.9));
+  animation: dash-border-rotate 7s linear infinite;
+}
+
+@keyframes dash-border-rotate {
+  to { --border-angle: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comp-dash-glow { animation: none; }
+}
+
 .comp-dash {
-  background: rgba(255,255,255,.06);
+  position: relative;
+  background: linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.06)), rgba(15,23,42,.86);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255,255,255,.12);
   border-radius: 20px;
   padding: 28px 30px;
+}
+
+.comp-reg-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.comp-reg-badge {
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
 .comp-dash-header {
