@@ -191,11 +191,19 @@ if (testimonialCarousel) {
   let carouselTimer = null;
 
   function goToSlide(index) {
-    slides[activeSlide].classList.remove('active');
+    if (index === activeSlide) return;
+
+    const outgoing = slides[activeSlide];
     dots[activeSlide].classList.remove('active');
+    dots[index].classList.add('active');
+
+    outgoing.classList.remove('active');
+    outgoing.classList.add('prev');
+    slides[index].classList.add('active');
+
+    setTimeout(() => outgoing.classList.remove('prev'), 650);
+
     activeSlide = index;
-    slides[activeSlide].classList.add('active');
-    dots[activeSlide].classList.add('active');
   }
 
   function nextSlide() {
