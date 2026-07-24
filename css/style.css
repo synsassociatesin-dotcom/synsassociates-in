@@ -1105,13 +1105,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .testimonials-header .section-subtitle { margin: 0 auto; }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  align-items: stretch;
-}
-
 .testimonial-card {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
@@ -1186,6 +1179,98 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .author-role {
   font-size: .78rem;
   color: var(--text-light);
+}
+
+/* ---------- Testimonial Spotlight (featured client) ---------- */
+.testimonial-spotlight {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  padding: 40px 36px;
+  background: var(--bg-white);
+  border: 1px solid rgba(201,168,76,.35);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spotlight-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 3px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.spotlight-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.spotlight-quote-top,
+.spotlight-quote-bottom {
+  font-size: .92rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.spotlight-author { margin-top: 8px; }
+.spotlight-author .author-name { font-size: .95rem; }
+
+/* ---------- Testimonial Carousel ---------- */
+.testimonial-carousel { max-width: 760px; margin: 0 auto; }
+
+.carousel-track {
+  position: relative;
+  min-height: 280px;
+}
+
+.testimonial-carousel .testimonial-card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity .6s ease, transform .6s ease, visibility 0s linear .6s;
+}
+
+.testimonial-carousel .testimonial-card.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--border);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.carousel-dot:hover { background: var(--gold); }
+
+.carousel-dot.active {
+  background: var(--gold);
+  transform: scale(1.3);
 }
 
 /* =============================================
@@ -1800,8 +1885,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   /* Services — 2 cols on tablet */
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 
-  /* Testimonials / Resources — 2 cols */
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Resources — 2 cols */
   .resources-grid    { grid-template-columns: repeat(2, 1fr); }
 
   /* Footer — 2 cols */
@@ -1832,9 +1916,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .why-features { grid-template-columns: 1fr; }
   .why-right    { grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  /* Testimonials / Resources — 1 col */
-  .testimonials-grid,
+  /* Resources — 1 col */
   .resources-grid { grid-template-columns: 1fr; }
+
+  /* Testimonial spotlight + carousel — tighter padding on tablet/mobile */
+  .testimonial-spotlight { padding: 32px 24px; }
+  .spotlight-photo { width: 104px; height: 104px; }
+  .carousel-track { min-height: 340px; }
 
   /* Contact */
   .contact-inner { grid-template-columns: 1fr; }

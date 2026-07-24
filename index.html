@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/style.css?v=14" />
 
   <!-- Google Analytics — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -815,53 +815,222 @@
       </p>
     </div>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal" data-delay="0">
-        <div class="stars">★★★★★</div>
-        <p>
-          "SYNS Associates handled our NBFC registration end-to-end and obtained our Certificate of Registration
-          from RBI within the promised timeline. Their knowledge of RBI guidelines is exceptional —
-          they flagged issues in our application that we'd never have caught ourselves."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">RK</div>
-          <div>
-            <div class="author-name">Rajesh Kapoor</div>
-            <div class="author-role">MD, Horizon Finance Ltd.</div>
+    <div class="testimonial-spotlight reveal">
+      <div class="spotlight-quote-top">
+        "Working with SYNS Associates has been a seamless experience. Their team has handled my taxation,
+        GST, and compliance matters with exceptional professionalism and accuracy."
+      </div>
+      <div class="spotlight-photo">
+        <img src="images/testimonials/onkar.jpg" alt="Onkar, Stand-up Comedian" loading="lazy">
+      </div>
+      <div class="spotlight-quote-bottom">
+        "Their timely guidance allows me to focus on my work without worrying about financial compliances.
+        I highly recommend their services."
+      </div>
+      <div class="spotlight-author">
+        <div class="author-name">Onkar</div>
+        <div class="author-role">Stand-up Comedian</div>
+      </div>
+    </div>
+
+    <div class="testimonial-carousel reveal" id="testimonial-carousel">
+      <div class="carousel-track">
+        <div class="testimonial-card active" data-slide="0">
+          <div class="stars">★★★★★</div>
+          <p>
+            "SYNS Associates has been instrumental in keeping our ROC filings and regulatory approvals
+            on track across multiple project sites. Their proactive updates mean we're never caught off
+            guard by a compliance deadline."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">GX</div>
+            <div>
+              <div class="author-name">Globe X Infra Private Limited</div>
+              <div class="author-role">Real Estate &amp; Infrastructure</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="1">
+          <div class="stars">★★★★★</div>
+          <p>
+            "As a fast-moving tech firm, the last thing we want to think about is compliance paperwork.
+            SYNS handles our GST and statutory filings quietly and accurately in the background —
+            exactly how it should be."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CA</div>
+            <div>
+              <div class="author-name">Cosmic Algo Pvt Ltd</div>
+              <div class="author-role">Algorithmic Trading Firm</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="2">
+          <div class="stars">★★★★★</div>
+          <p>
+            "Running a members' club comes with its own regulatory quirks, and SYNS took the time to
+            understand ours. Their team is responsive and genuinely invested in getting things right."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RS</div>
+            <div>
+              <div class="author-name">Regalmarksman Shooting Club Pvt. Ltd.</div>
+              <div class="author-role">Sports &amp; Recreation Club</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="3">
+          <div class="stars">★★★★★</div>
+          <p>
+            "SYNS Associates brought much-needed structure to our compliance processes as we scaled.
+            Their advice is always practical, not just technically correct."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">BI</div>
+            <div>
+              <div class="author-name">Brandcash Innovations Private Limited</div>
+              <div class="author-role">Fintech &amp; Branding Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="4">
+          <div class="stars">★★★★★</div>
+          <p>
+            "We've relied on SYNS for our tax and labour law compliance for a while now, and the
+            consistency has been reassuring. They flag issues well before they become problems."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">WI</div>
+            <div>
+              <div class="author-name">Wattr Industries Pvt Ltd</div>
+              <div class="author-role">Industrial Manufacturing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="5">
+          <div class="stars">★★★★★</div>
+          <p>
+            "From GST returns to licensing renewals, SYNS Associates has simplified compliance for our
+            business considerably. Their team explains things in plain language, which we really appreciate."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">BB</div>
+            <div>
+              <div class="author-name">Banke Bihari Sweets</div>
+              <div class="author-role">Sweets &amp; Confectionery</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="6">
+          <div class="stars">★★★★★</div>
+          <p>
+            "SYNS Associates manages our filings on time, every time. It's one less thing for us to
+            worry about while running the business day to day."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">US</div>
+            <div>
+              <div class="author-name">Umang Sweets</div>
+              <div class="author-role">Sweets &amp; Confectionery</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="7">
+          <div class="stars">★★★★★</div>
+          <p>
+            "Given the scale of our projects, regulatory compliance is critical. SYNS Associates has
+            been a dependable partner in navigating approvals and filings without delays."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AI</div>
+            <div>
+              <div class="author-name">Apexstone Infrastructure Pvt Ltd</div>
+              <div class="author-role">Infrastructure Development</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="8">
+          <div class="stars">★★★★★</div>
+          <p>
+            "SYNS Associates has supported us through incorporation and ongoing compliance with genuine
+            care and attention to detail. It feels like having an in-house compliance team without the overhead."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">KG</div>
+            <div>
+              <div class="author-name">Kidoozy Groups</div>
+              <div class="author-role">Children's Products &amp; Services</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="9">
+          <div class="stars">★★★★★</div>
+          <p>
+            "Compliance across multiple states used to be a headache for us. SYNS Associates has
+            streamlined it considerably, and their team is always quick to respond."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NL</div>
+            <div>
+              <div class="author-name">Neeva Logistics</div>
+              <div class="author-role">Logistics &amp; Supply Chain</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="10">
+          <div class="stars">★★★★★</div>
+          <p>
+            "SYNS Associates has handled our tax and regulatory compliance efficiently, letting us focus
+            on serving our customers. Their guidance has been clear and dependable."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AT</div>
+            <div>
+              <div class="author-name">Akash Tours and Travels</div>
+              <div class="author-role">Travel &amp; Tourism</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-slide="11">
+          <div class="stars">★★★★★</div>
+          <p>
+            "As a growing brand, we needed a compliance partner who could keep pace with us. SYNS
+            Associates has done exactly that — professionally and on time."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NG</div>
+            <div>
+              <div class="author-name">Neera Glow</div>
+              <div class="author-role">Skincare &amp; Wellness Brand</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="testimonial-card reveal" data-delay="100">
-        <div class="stars">★★★★★</div>
-        <p>
-          "We were a 3-founder startup with zero knowledge of compliance. SYNS Associates took care of
-          everything — incorporation, GST, labour registrations, and our first ROC filing.
-          We've had zero penalties in two years. Highly recommended for any growing business."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">PS</div>
-          <div>
-            <div class="author-name">Priya Sharma</div>
-            <div class="author-role">Co-Founder, TechBridge Solutions</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal" data-delay="200">
-        <div class="stars">★★★★★</div>
-        <p>
-          "Their FEMA and SEBI compliance team is simply outstanding. We had complex FDI structuring
-          requirements and they navigated every regulatory hurdle seamlessly. The dedicated manager
-          concept means you always speak to someone who knows your file inside out."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">AM</div>
-          <div>
-            <div class="author-name">Arjun Mehta</div>
-            <div class="author-role">CFO, GlobalEdge Ventures Pvt. Ltd.</div>
-          </div>
-        </div>
+      <div class="carousel-dots">
+        <button class="carousel-dot active" data-slide="0" aria-label="Testimonial 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Testimonial 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Testimonial 3"></button>
+        <button class="carousel-dot" data-slide="3" aria-label="Testimonial 4"></button>
+        <button class="carousel-dot" data-slide="4" aria-label="Testimonial 5"></button>
+        <button class="carousel-dot" data-slide="5" aria-label="Testimonial 6"></button>
+        <button class="carousel-dot" data-slide="6" aria-label="Testimonial 7"></button>
+        <button class="carousel-dot" data-slide="7" aria-label="Testimonial 8"></button>
+        <button class="carousel-dot" data-slide="8" aria-label="Testimonial 9"></button>
+        <button class="carousel-dot" data-slide="9" aria-label="Testimonial 10"></button>
+        <button class="carousel-dot" data-slide="10" aria-label="Testimonial 11"></button>
+        <button class="carousel-dot" data-slide="11" aria-label="Testimonial 12"></button>
       </div>
     </div>
   </div>
@@ -1151,6 +1320,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>

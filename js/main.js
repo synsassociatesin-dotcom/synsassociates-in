@@ -182,6 +182,50 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
 
+/* ---------- Testimonial Carousel ---------- */
+const testimonialCarousel = document.getElementById('testimonial-carousel');
+if (testimonialCarousel) {
+  const slides = [...testimonialCarousel.querySelectorAll('.testimonial-card')];
+  const dots = [...testimonialCarousel.querySelectorAll('.carousel-dot')];
+  let activeSlide = 0;
+  let carouselTimer = null;
+
+  function goToSlide(index) {
+    slides[activeSlide].classList.remove('active');
+    dots[activeSlide].classList.remove('active');
+    activeSlide = index;
+    slides[activeSlide].classList.add('active');
+    dots[activeSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    goToSlide((activeSlide + 1) % slides.length);
+  }
+
+  function startCarousel() {
+    stopCarousel();
+    carouselTimer = setInterval(nextSlide, 5000);
+  }
+
+  function stopCarousel() {
+    if (carouselTimer) clearInterval(carouselTimer);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+      startCarousel();
+    });
+  });
+
+  testimonialCarousel.addEventListener('mouseenter', stopCarousel);
+  testimonialCarousel.addEventListener('mouseleave', startCarousel);
+  testimonialCarousel.addEventListener('touchstart', stopCarousel, { passive: true });
+  testimonialCarousel.addEventListener('touchend', startCarousel);
+
+  startCarousel();
+}
+
 /* ---------- Smooth Scroll for anchor links ---------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
